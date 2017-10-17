@@ -49,6 +49,6 @@ public class NumberUtilTest {
     public void testGetFirstSumsOfPairsNumberFormat() throws Exception {
         thrown.expect(NumberFormatException.class);
         String[] arrayPairWithParameter = {"a", "100 8", "15 245", "1945 54"};
-        assertEquals(Arrays.asList(108, 260, 1999), NumberUtil.getFirstSumsOfPairs(arrayPairWithParameter));
+        NumberUtil.getFirstSumsOfPairs(arrayPairWithParameter);
     }
 }

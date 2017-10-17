@@ -19,7 +19,10 @@ public class NumberUtil {
 
         List<Integer> sumOfPairs = new ArrayList<>(numberOfPairs);
         for (int i = 1; i <= numberOfPairs; i++) {
-            sumOfPairs.add(getSumOfPair(getNumbersFromPair(arrayPairsWithParameter[i])));
+            sumOfPairs.add(
+                    getSumOfPair(
+                            getNumbersFromPair(
+                                    arrayPairsWithParameter[i])));
         }
 
         return sumOfPairs;
