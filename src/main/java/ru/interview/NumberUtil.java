@@ -19,14 +19,13 @@ public class NumberUtil {
 
         List<Integer> sumOfPairs = new ArrayList<>(numberOfPairs);
         for (int i = 1; i <= numberOfPairs; i++) {
-            String[] numbersFromPair = arrayPairsWithParameter[i].trim().split(" ");
-            sumOfPairs.add(getSumOfPair(numbersFromPair));
+            sumOfPairs.add(getSumOfPair(getNumbersFromString(arrayPairsWithParameter[i])));
         }
 
         return sumOfPairs;
     }
 
-    public static int getSumOfPair(String[] numbersFromPair) {
+    private static int getSumOfPair(String[] numbersFromPair) {
         int sum =0;
         for (int j = 0; j < numbersFromPair.length; j++) {
             if (!numbersFromPair[j].equals("")) {
@@ -35,5 +34,9 @@ public class NumberUtil {
             }
         }
         return sum;
+    }
+
+    private static String[] getNumbersFromString(String arrayPairsWithParameter) {
+        return arrayPairsWithParameter.trim().split(" ");
     }
 }
