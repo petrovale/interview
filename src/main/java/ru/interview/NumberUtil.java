@@ -19,15 +19,21 @@ public class NumberUtil {
 
         List<Integer> sumOfPairs = new ArrayList<>(numberOfPairs);
         for (int i = 1; i <= numberOfPairs; i++) {
-            String[] numbersFromPair = arrayPairsWithParameter[i].split(" ");
-            int sum =0;
-            for (int j = 0; j < numbersFromPair.length; j++) {
-                int number = Integer.parseInt(numbersFromPair[j]);
-                sum+= number;
-            }
-            sumOfPairs.add(sum);
+            String[] numbersFromPair = arrayPairsWithParameter[i].trim().split(" ");
+            sumOfPairs.add(getSumOfPair(numbersFromPair));
         }
 
         return sumOfPairs;
+    }
+
+    public static int getSumOfPair(String[] numbersFromPair) {
+        int sum =0;
+        for (int j = 0; j < numbersFromPair.length; j++) {
+            if (!numbersFromPair[j].equals("")) {
+                int number = Integer.parseInt(numbersFromPair[j]);
+                sum += number;
+            }
+        }
+        return sum;
     }
 }

@@ -14,7 +14,7 @@ public class NumberUtilTest {
 
     @Test
     public void testGetFirstSumsOfPairs() throws Exception {
-        String[] arrayPairWithParameter = {"3", "100 8", "15 245", "1945 54"};
+        String[] arrayPairWithParameter = {"3", "100  8", " 15 245 ", "1945 54"};
         assertEquals(Arrays.asList(108, 260, 1999), NumberUtil.getFirstSumsOfPairs(arrayPairWithParameter));
     }
 
