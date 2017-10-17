@@ -26,11 +26,10 @@ public class NumberUtil {
     }
 
     private static int getSumOfPair(String[] numbersFromPair) {
-        int sum =0;
-        for (int j = 0; j < numbersFromPair.length; j++) {
-            if (!numbersFromPair[j].equals("")) {
-                int number = Integer.parseInt(numbersFromPair[j]);
-                sum += number;
+        int sum = 0;
+        for (String number : numbersFromPair) {
+            if (!number.equals("")) {
+                sum += Integer.parseInt(number);
             }
         }
         return sum;
