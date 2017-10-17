@@ -19,7 +19,7 @@ public class NumberUtil {
 
         List<Integer> sumOfPairs = new ArrayList<>(numberOfPairs);
         for (int i = 1; i <= numberOfPairs; i++) {
-            sumOfPairs.add(getSumOfPair(getNumbersFromString(arrayPairsWithParameter[i])));
+            sumOfPairs.add(getSumOfPair(getNumbersFromPair(arrayPairsWithParameter[i])));
         }
 
         return sumOfPairs;
@@ -36,7 +36,7 @@ public class NumberUtil {
         return sum;
     }
 
-    private static String[] getNumbersFromString(String arrayPairsWithParameter) {
+    private static String[] getNumbersFromPair(String arrayPairsWithParameter) {
         return arrayPairsWithParameter.trim().split(" ");
     }
 }
