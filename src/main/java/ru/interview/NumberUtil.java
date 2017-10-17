@@ -6,6 +6,9 @@ import java.util.Objects;
 
 public class NumberUtil {
 
+    private NumberUtil() {
+    }
+
     public static List<Integer> getFirstSumsOfPairs(String[] arrayPairsWithParameter) {
         Objects.requireNonNull(arrayPairsWithParameter, "String can not be null");
         int numberOfPairs = Integer.parseInt(arrayPairsWithParameter[0]);
